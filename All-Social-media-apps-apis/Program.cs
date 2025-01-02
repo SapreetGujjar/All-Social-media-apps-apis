@@ -1,4 +1,5 @@
 using All_Social_media_apps_apis.DataBase;
+using All_Social_media_apps_apis.MappingProfile;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,19 @@ var connectionString = builder.Configuration.GetConnectionString("dbString");
 builder.Services.AddDbContext<Applicationdbcontext>(options =>
     options.UseSqlServer(connectionString)
 );
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        // Allow all origins (you can specify particular origins like "http://example.com")
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 
 var app = builder.Build();
 

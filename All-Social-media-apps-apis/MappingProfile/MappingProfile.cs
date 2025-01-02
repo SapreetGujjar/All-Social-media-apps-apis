@@ -9,7 +9,7 @@ namespace All_Social_media_apps_apis.MappingProfile
     {
         public MappingProfile()
         {
-            CreateMap<Emails, EmailDTO>().ReverseMap();
+            CreateMap<EmailDTO, Emails>();
         }
     }
 }
