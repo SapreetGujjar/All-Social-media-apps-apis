@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using All_Social_media_apps_apis.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace All_Social_media_apps_apis.DataBase
 {
@@ -8,5 +9,6 @@ namespace All_Social_media_apps_apis.DataBase
         {
             
         }
+        public DbSet<Emails> Emails { get; set; }
     }
 }
