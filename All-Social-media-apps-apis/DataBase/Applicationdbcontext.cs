@@ -10,5 +10,6 @@ namespace All_Social_media_apps_apis.DataBase
             
         }
         public DbSet<Emails> Emails { get; set; }
+        public DbSet<Gmail> Gmails { get; set; }
     }
 }

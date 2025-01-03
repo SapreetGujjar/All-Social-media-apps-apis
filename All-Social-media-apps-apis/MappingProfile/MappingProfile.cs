@@ -10,6 +10,8 @@ namespace All_Social_media_apps_apis.MappingProfile
         public MappingProfile()
         {
             CreateMap<EmailDTO, Emails>();
+            CreateMap<GmailDTO, Gmail>();
+            CreateMap<Gmail, GmailDTO>();
         }
     }
 }
